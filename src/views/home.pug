@@ -1,0 +1,48 @@
+doctype html
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(http-equiv="X-UA-Compatible", content="IE=edge")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        title chatting room
+        link(rel="stylesheet", href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css")
+        link(rel="stylesheet", href="/public/css/styles.css")
+    body
+        div.status-bar
+            div.status-bar__column
+                span No Service
+                i.fas.fa-wifi
+            div.status-bar__column
+                span 18:43
+            div.status-bar__column
+                span 110%
+                i.fas.fa-battery-full
+                i.fas.fa-bolt
+        div#welcome
+            header.welcome-header
+                h1.welcome-header__title Welcome to Chatting Room
+
+            form#login-form
+                input#nickname(type="text" placeholder="Nickname"  required)
+                input#roomname(type="text" placeholder="Room name" required)
+                input(type ="submit" value="Enter Room")
+            
+            div#roomList
+                h3 open room 
+                ul 
+        div#room 
+            h3
+            span 
+            ul
+            div#msg
+                form#msg-form
+                    input(type="text" placeholder="Write a message"  required)
+                    button
+                        i.fas.fa-arrow-up
+                
+                
+
+        script(src="/socket.io/socket.io.js")
+        script(src="https://kit.fontawesome.com/6478f529f2.js"
+        crossorigin="anonymous")
+        script(src="/public/js/app.js")
